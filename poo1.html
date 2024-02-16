@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <title>Student Information</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .create-button {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Student Information</h2>
+
+  <button class="create-button" onclick="showCreateForm()">Create</button>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Roll Number</th>
+        <th>Major</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John Doe</td>
+        <td>123456</td>
+        <td>Computer Science</td>
+      </tr>
+      <tr>
+        <td>Jane Smith</td>
+        <td>789012</td>
+        <td>Electrical Engineering</td>
+      </tr>
+      <!-- Add more rows as needed -->
+    </tbody>
+  </table>
+
+  <div id="createForm" style="display: none;">
+    <h3>Create New Record</h3>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br>
+
+      <label for="rollNumber">Roll Number:</label>
+      <input type="text" id="rollNumber" name="rollNumber" required><br>
+
+      <label for="major">Major:</label>
+      <input type="text" id="major" name="major" required><br>
+
+      <button type="button" onclick="addNewRecord()">Save</button>
+    </form>
+  </div>
+
+  <script>
+    function showCreateForm() {
+      document.getElementById("createForm").style.display = "block";
+    }
+
+    function addNewRecord() {
+      var name = document.getElementById("name").value;
+      var rollNumber = document.getElementById("rollNumber").value;
+      var major = document.getElementById("major").value;
+
+      // Add logic to save the new record, e.g., append a new row to the table
+      var table = document.querySelector("table tbody");
+      var newRow = table.insertRow(table.rows.length);
+
+      var cell1 = newRow.insertCell(0);
+      var cell2 = newRow.insertCell(1);
+      var cell3 = newRow.insertCell(2);
+
+      cell1.innerHTML = name;
+      cell2.innerHTML = rollNumber;
+      cell3.innerHTML = major;
+
+      // Clear the form
+      document.getElementById("name").value = "";
+      document.getElementById("rollNumber").value = "";
+      document.getElementById("major").value = "";
+
+      // Hide the form after adding the new record
+      document.getElementById("createForm").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

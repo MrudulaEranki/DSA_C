@@ -1,0 +1,26 @@
+Searching History
+Element name:oxygen
+Element symbol:o
+Atomic weight:15.999400
+Atomic number:8
+Element Discovery date:1774
+Element group:16
+Melting point:-218
+Boiling point:-183
+Electron configuration:2s^2 2p^4
+Searching History
+Element name:sulfur
+Element symbol:s
+Atomic weight:32.064999
+Atomic number:16
+Element group:16
+Melting point:113
+Boiling point:445
+Electron configuration:3S^2 3P^4
+Searching History
+Element name:germanium
+Element symbol:ge
+Atomic weight:72.639999
+Atomic number:32
+Element group:14
+Electron configuration:3d^10 4s^2 4p^2
